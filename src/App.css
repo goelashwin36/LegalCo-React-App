@@ -1,3 +1,7 @@
+body{
+  background-color: #fff !important;
+}
+
 .App {
   text-align: center;
 }
@@ -19,4 +23,53 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.Navbar .Link{
+  /* padding: 15px; */
+  background:#007bff;
+  color: white;
+  margin: 5px;
+}
+
+.Container{
+  padding: 70px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+
+.list-group-flush .list-group-item{
+  color: #343a40;
+}
+.list-group-flush .list-group-item:first-child{
+  background-color: #343a40!important;
+  color: #fff;
+}
+
+.card{
+  margin: 10px;
+  padding: 10px;
+  color: #343a40 !important;
+}
+
+.navbar-text{
+  margin: 5px;
+  padding: .375rem .75rem !important;
+
+}
+
+.container{
+  background-color: #343a40;
+  color: #fff !important;
+  transition-duration: 0.5s;
+}
+.container:hover{
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
 }

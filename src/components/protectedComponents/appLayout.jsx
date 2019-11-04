@@ -79,7 +79,7 @@ class AppLayout extends Component {
           <div>
 
             <Navbar collapseOnSelect expand="md" className="Navbar" bg="dark" variant="dark">
-              <Navbar.Brand>LSM</Navbar.Brand>
+              <Navbar.Brand>LegalCo</Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
 

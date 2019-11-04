@@ -204,7 +204,10 @@ class LandingPage extends Component {
         <Router>
           <div>
             <Navbar className="Navbar" bg="dark" variant="dark">
-              <Navbar.Brand>LSM</Navbar.Brand>
+              <Navbar.Brand>LegalCo</Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+
               <Nav className="mr-auto">
                 <Link className="Link btn" to="/">Home</Link>
                 <Link className="Link btn" to="/services">Serivces</Link>
@@ -215,6 +218,7 @@ class LandingPage extends Component {
                   Login/Signup
                         </Button>
               </Form>
+              </Navbar.Collapse>
             </Navbar>
             <Switch>
               <Route exact path='/' component={Home} />

@@ -34,7 +34,7 @@ class AppLayout extends Component {
     }
 
     componentWillMount() {
-        axios.get(`http://localhost:3000/api/user/viewServices`)
+        axios.get(`https://legalcobackend.herokuapp.com/api/user/viewServices`)
             .then((res) => {
                 // console.log("In then")
                 console.log(res.data);
@@ -68,8 +68,6 @@ class AppLayout extends Component {
     }
 
     handleChange = (event) => {
-        console.log(event.target.name)
-        console.log(event.target.value)
         this.setState({ [event.target.name]: event.target.value })
     }
 
@@ -99,7 +97,7 @@ class AppLayout extends Component {
             console.log("Application: ", application)
             // console.log(user);
 
-            axios.post(`http://localhost:3000/api/user/requestService`, application)
+            axios.post(`https://legalcobackend.herokuapp.com/api/user/requestService`, application)
                 .then((res) => {
                     console.log(res.data);
                     if (res.data.meta.success === true) {

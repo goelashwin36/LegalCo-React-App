@@ -49,7 +49,7 @@ class LandingPage extends Component {
 
   componentDidMount() {
     if (cookie.load('token') !== undefined) {
-      axios.post(`http://localhost:3000/api/user/login`, { auto: 1 })
+      axios.post(`https://legalcobackend.herokuapp.com/api/user/login`, { auto: 1 })
         .then((res) => {
           console.log(res.data);
           if (res.data.meta.success === true) {
@@ -115,7 +115,7 @@ class LandingPage extends Component {
         }
         // console.log(user);
 
-        axios.post(`http://localhost:3000/api/user/login`, user)
+        axios.post(`https://legalcobackend.herokuapp.com/api/user/login`, user)
           .then((res) => {
             console.log(res.data);
             if (res.data.meta.success === true) {
@@ -156,7 +156,7 @@ class LandingPage extends Component {
           "gender": this.state.signupGender,
           "mobile": this.state.signupMobile,
         }
-        axios.post(`http://localhost:3000/api/user/register`, user)
+        axios.post(`https://legalcobackend.herokuapp.com/api/user/register`, user)
           .then(res => {
             console.log(res.data);
             if (res.data.meta.success === true) {

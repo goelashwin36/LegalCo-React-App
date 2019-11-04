@@ -13,7 +13,7 @@ class Contact extends Component {
 
   constructor() {
     super();
-    axios.defaults.withCredentials = true
+    
     this.state = {
       contactForm: "",
       name: "",

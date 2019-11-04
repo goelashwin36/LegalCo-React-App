@@ -150,7 +150,8 @@ class AppLayout extends Component {
             <>
 
                 <Container className="Container">
-                    <Row className="justify-content-md-center">
+                <h1 className="heading">Request Service</h1>
+                    <Row className="justify-content-md-center content">
 
                         <Col xs lg="8">
                             <Form noValidate validated={this.state.serviceForm} onSubmit={this.handleSubmitServiceForm} name="serviceForm">

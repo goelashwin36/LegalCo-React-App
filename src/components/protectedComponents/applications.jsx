@@ -166,14 +166,14 @@ class Applications extends Component {
       let tempOpen = 0
       for (var i = 0; i < this.state.applications.length; i++) {
         if (ApplicationsClosed[i] != null) {
-          tempClose+=1
+          tempClose += 1
           break
         }
       }
 
       for (var i = 0; i < this.state.applications.length; i++) {
         if (ApplicationsOpen[i] != null) {
-          tempOpen+=1
+          tempOpen += 1
           break
 
         }
@@ -192,28 +192,32 @@ class Applications extends Component {
       <>
         <Container className="Container">
 
-          <Tabs defaultActiveKey="Open" id="uncontrolled-tab-example">
-            <Tab eventKey="Open" title="Open Application">
-              <br />
-              <Row className="justify-content-center">
+          <h1 className="heading">Applications</h1>
+          <div className="content">
 
-                {ApplicationsOpen}
+            <Tabs defaultActiveKey="Open" id="uncontrolled-tab-example">
+              <Tab eventKey="Open" title="Open Application">
+                <br />
+                <Row className="justify-content-center">
+
+                  {ApplicationsOpen}
 
 
-              </Row>
-            </Tab>
+                </Row>
+              </Tab>
 
 
-            <Tab eventKey="Closed" title="Closed Applications">
-              <br />
-              <Row className="justify-content-center">
+              <Tab eventKey="Closed" title="Closed Applications">
+                <br />
+                <Row className="justify-content-center">
 
-                {ApplicationsClosed}
+                  {ApplicationsClosed}
 
-              </Row>
-            </Tab>
+                </Row>
+              </Tab>
 
-          </Tabs>
+            </Tabs>
+          </div>
         </Container>
       </>
     );

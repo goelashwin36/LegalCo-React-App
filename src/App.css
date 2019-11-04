@@ -85,8 +85,11 @@ body {
 
 .container .content{
   padding: 20px;
-  font-size: 24px;
   margin: 30px 0px;
+}
+
+.container p{
+  font-size: 24px;
 }
 
 .card img{

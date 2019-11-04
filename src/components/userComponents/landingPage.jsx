@@ -203,21 +203,21 @@ class LandingPage extends Component {
       <>
         <Router>
           <div>
-            <Navbar className="Navbar" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="md" className="Navbar" bg="dark" variant="dark">
               <Navbar.Brand>LegalCo</Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
 
-              <Nav className="mr-auto">
-                <Link className="Link btn" to="/">Home</Link>
-                <Link className="Link btn" to="/services">Serivces</Link>
-                <Link className="Link btn" to="/contact">Contact</Link>
-              </Nav>
-              <Form inline>
-                <Button variant="primary" onClick={this.handleShow}>
-                  Login/Signup
-                        </Button>
-              </Form>
+                <Nav className="mr-auto">
+                  <Link className="Link btn" to="/">Home</Link>
+                  <Link className="Link btn" to="/services">Serivces</Link>
+                  <Link className="Link btn" to="/contact">Contact</Link>
+                </Nav>
+                <Form inline>
+                  <Button variant="primary" onClick={this.handleShow}>
+                    Login/Signup
+                  </Button>
+                </Form>
               </Navbar.Collapse>
             </Navbar>
             <Switch>
@@ -389,7 +389,7 @@ class LandingPage extends Component {
                 </Button>
           </Modal.Footer>
         </Modal>
-        
+
 
 
 

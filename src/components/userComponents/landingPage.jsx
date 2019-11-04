@@ -213,7 +213,7 @@ class LandingPage extends Component {
                   <Link className="Link btn" to="/services">Serivces</Link>
                   <Link className="Link btn" to="/contact">Contact</Link>
                 </Nav>
-                <Form inline>
+                <Form>
                   <Button variant="primary" onClick={this.handleShow}>
                     Login/Signup
                   </Button>

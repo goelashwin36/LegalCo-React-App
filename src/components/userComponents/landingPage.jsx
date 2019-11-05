@@ -210,7 +210,7 @@ class LandingPage extends Component {
 
                 <Nav className="mr-auto">
                   <Link className="Link btn" to="/">Home</Link>
-                  <Link className="Link btn" to="/services">Serivces</Link>
+                  <Link className="Link btn" to="/services">Services</Link>
                   <Link className="Link btn" to="/contact">Contact</Link>
                 </Nav>
                 <Form>
@@ -380,14 +380,6 @@ class LandingPage extends Component {
 
             </Tabs>
           </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
-              Close
-                </Button>
-            <Button variant="primary" onClick={this.handleClose}>
-              Save Changes
-                </Button>
-          </Modal.Footer>
         </Modal>
 
 

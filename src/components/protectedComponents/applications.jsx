@@ -27,7 +27,7 @@ class Applications extends Component {
 
   componentWillMount() {
 
-    axios.get(`https://legalcobackend.herokuapp.com/api/user/viewApplications`)
+    axios.get(`https://legalcobackend.herokuapp.com/api/user/viewApplications`,{withCredentials: true})
       .then((res) => {
         console.log(res.data);
         if (res.data.meta.success === true) {

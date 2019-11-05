@@ -50,7 +50,7 @@ class Contact extends Component {
       console.log("Application: ", application)
       // console.log(user);
 
-      axios.post(`https://legalcobackend.herokuapp.com/api/user/contact`, application)
+      axios.post(`https://legalcobackend.herokuapp.com/api/user/contact`, application, {withCredentials: true})
         .then((res) => {
           console.log(res.data);
           if (res.data.meta.success === true) {

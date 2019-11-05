@@ -66,12 +66,12 @@ class Applications extends Component {
           <>
             <ListGroup className="list-group-flush">
               <ListGroupItem>Agent Name</ListGroupItem>
-              <ListGroupItem>Value</ListGroupItem>
+              <ListGroupItem>{application.agentName}</ListGroupItem>
             </ListGroup>
 
             <ListGroup className="list-group-flush">
               <ListGroupItem>Agent Phone Number</ListGroupItem>
-              <ListGroupItem>Value</ListGroupItem>
+              <ListGroupItem>{application.agentMobile}</ListGroupItem>
             </ListGroup>
           </>
 

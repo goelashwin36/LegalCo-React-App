@@ -7,13 +7,12 @@ import Applications from "./applications.jsx"
 
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form'
+
+import cookie from 'react-cookies';
 
 import '../../App.css';
 
@@ -29,7 +28,7 @@ class AppLayout extends Component {
   }
 
   componentWillMount() {
-    axios.get(`https://legalcobackend.herokuapp.com/api/user/fetchProfile`)
+    axios.get(`https://legalcobackend.herokuapp.com/api/user/fetchProfile`, {headers: {Authorization: 'Bearer ' + cookie.load('token')}})
       .then((res) => {
         // console.log("In then")
         console.log(res.data);

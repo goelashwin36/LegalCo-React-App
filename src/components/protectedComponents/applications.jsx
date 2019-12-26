@@ -7,9 +7,10 @@ import Container from 'react-bootstrap/Container'
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
 import ListGroup from 'react-bootstrap/ListGroup'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
+
+import cookie from 'react-cookies';
 
 import '../../App.css';
 
@@ -27,7 +28,7 @@ class Applications extends Component {
 
   componentWillMount() {
 
-    axios.get(`https://legalcobackend.herokuapp.com/api/user/viewApplications`)
+    axios.get(`https://legalcobackend.herokuapp.com/api/user/viewApplications`, {headers: {Authorization: 'Bearer ' + cookie.load('token')}})
       .then((res) => {
         console.log(res.data);
         if (res.data.meta.success === true) {

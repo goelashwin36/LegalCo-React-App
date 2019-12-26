@@ -8,10 +8,7 @@ import Services from "./services.jsx"
 
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 
-import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-
 import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 import Modal from 'react-bootstrap/Modal'
@@ -47,9 +44,9 @@ class LandingPage extends Component {
   }
 
 
-  componentDidMount() {
+  componentDidMount() { 
     if (cookie.load('token') !== undefined) {
-      axios.post(`https://legalcobackend.herokuapp.com/api/user/login`, { auto: 1 })
+      axios.post(`https://legalcobackend.herokuapp.com/api/user/login`, { auto: 1 }, {headers: {Authorization: 'Bearer ' + cookie.load('token')}})
         .then((res) => {
           console.log(res.data);
           if (res.data.meta.success === true) {

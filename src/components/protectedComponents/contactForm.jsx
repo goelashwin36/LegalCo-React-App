@@ -7,6 +7,8 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
+import cookie from 'react-cookies';
+
 import '../../App.css';
 
 class Contact extends Component {
@@ -50,7 +52,7 @@ class Contact extends Component {
       console.log("Application: ", application)
       // console.log(user);
 
-      axios.post(`https://legalcobackend.herokuapp.com/api/user/contact`, application)
+      axios.post(`https://legalcobackend.herokuapp.com/api/user/contact`, application, {headers: {Authorization: 'Bearer ' + cookie.load('token')}})
         .then((res) => {
           console.log(res.data);
           if (res.data.meta.success === true) {

@@ -7,6 +7,8 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 
+import cookie from 'react-cookies';
+
 import '../../App.css';
 
 class AppLayout extends Component {
@@ -34,7 +36,7 @@ class AppLayout extends Component {
     }
 
     componentWillMount() {
-        axios.get(`https://legalcobackend.herokuapp.com/api/user/viewServices`)
+        axios.get(`https://legalcobackend.herokuapp.com/api/user/viewServices`, {headers: {Authorization: 'Bearer ' + cookie.load('token')}})
             .then((res) => {
                 // console.log("In then")
                 console.log(res.data);
@@ -97,7 +99,7 @@ class AppLayout extends Component {
             console.log("Application: ", application)
             // console.log(user);
 
-            axios.post(`https://legalcobackend.herokuapp.com/api/user/requestService`, application)
+            axios.post(`https://legalcobackend.herokuapp.com/api/user/requestService`, application, {headers: {Authorization: 'Bearer ' + cookie.load('token')}})
                 .then((res) => {
                     console.log(res.data);
                     if (res.data.meta.success === true) {

@@ -13,7 +13,7 @@ class AppLayout extends Component {
 
     constructor() {
         super();
-        axios.defaults.withcredentials = true
+        
         this.state = {
             serviceForm: "",
             services: "",

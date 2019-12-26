@@ -26,7 +26,7 @@ class LandingPage extends Component {
 
   constructor() {
     super();
-    axios.defaults.withcredentials = true
+    
     this.state = {
       loginForm: false,
       signupForm: false,

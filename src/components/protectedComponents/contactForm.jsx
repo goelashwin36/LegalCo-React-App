@@ -15,7 +15,7 @@ class Contact extends Component {
 
   constructor() {
     super();
-    axios.defaults.withcredentials = true
+    
     this.state = {
       contactForm: "",
       name: "",

@@ -29,7 +29,7 @@ class AppLayout extends Component {
   }
 
   componentWillMount() {
-    axios.get(`https://legalcobackend.herokuapp.com/api/user/fetchProfile`, {withCredentials: true})
+    axios.get(`https://legalcobackend.herokuapp.com/api/user/fetchProfile`)
       .then((res) => {
         // console.log("In then")
         console.log(res.data);

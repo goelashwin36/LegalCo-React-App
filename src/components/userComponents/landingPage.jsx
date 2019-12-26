@@ -29,7 +29,7 @@ class LandingPage extends Component {
 
   constructor() {
     super();
-    axios.defaults.withcredentials = true
+    axios.defaults.withcredentials = true;
     this.state = {
       loginForm: false,
       signupForm: false,
@@ -49,7 +49,7 @@ class LandingPage extends Component {
 
   componentDidMount() {
     if (cookie.load('token') !== undefined) {
-      axios.post(`https://legalcobackend.herokuapp.com/api/user/login`, { auto: 1 }, {withCredentials: true})
+      axios.post(`https://legalcobackend.herokuapp.com/api/user/login`, { auto: 1 })
         .then((res) => {
           console.log(res.data);
           if (res.data.meta.success === true) {

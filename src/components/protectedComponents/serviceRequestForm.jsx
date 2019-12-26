@@ -34,7 +34,7 @@ class AppLayout extends Component {
     }
 
     componentWillMount() {
-        axios.get(`https://legalcobackend.herokuapp.com/api/user/viewServices`, {withCredentials: true})
+        axios.get(`https://legalcobackend.herokuapp.com/api/user/viewServices`)
             .then((res) => {
                 // console.log("In then")
                 console.log(res.data);
@@ -97,7 +97,7 @@ class AppLayout extends Component {
             console.log("Application: ", application)
             // console.log(user);
 
-            axios.post(`https://legalcobackend.herokuapp.com/api/user/requestService`, application, {withCredentials: true})
+            axios.post(`https://legalcobackend.herokuapp.com/api/user/requestService`, application)
                 .then((res) => {
                     console.log(res.data);
                     if (res.data.meta.success === true) {
